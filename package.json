@@ -1,0 +1,70 @@
+{
+  "name": "react-slyer",
+  "jspm": {
+    "name": "react-slyer",
+    "dependencies": {
+      "lodash": "npm:lodash@^4.6.1",
+      "react": "npm:react@^0.14.7",
+      "slyer": "github:capaj/slyer@^1.7.1"
+    },
+    "devDependencies": {
+      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.8"
+    },
+    "peerDependencies": {
+      "buffer": "github:jspm/nodelibs-buffer@^0.2.0-alpha",
+      "process": "github:jspm/nodelibs-process@^0.2.0-alpha"
+    },
+    "overrides": {
+      "npm:fbjs@0.6.1": {
+        "dependencies": {}
+      },
+      "npm:jquery@2.2.1": {
+        "format": "amd"
+      },
+      "npm:react@0.14.7": {
+        "dependencies": {
+          "fbjs": "^0.6.1"
+        },
+        "format": "cjs",
+        "meta": {
+          "*": {
+            "globals": {
+              "process": "process"
+            }
+          }
+        },
+        "map": {
+          "fbjs/lib/ExecutionEnvironment.js": {
+            "production": "@empty"
+          },
+          "./lib/ReactDefaultPerf.js": {
+            "production": "@empty"
+          },
+          "./lib/ReactTestUtils.js": {
+            "production": "@empty"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0.0",
+  "description": "wrapper component for sly in react.js",
+  "main": "slyer.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capaj/react-slyer.git"
+  },
+  "keywords": [
+    "sly",
+    "slider"
+  ],
+  "author": "capajj@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/capaj/react-slyer/issues"
+  },
+  "homepage": "https://github.com/capaj/react-slyer#readme"
+}
